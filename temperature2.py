@@ -55,7 +55,7 @@ for city, lat_lon in cities.items():
         hourly_data = data['hourly']
         hourly_table = json_normalize(hourly_data['data'])
         
-        # Convert the temperatures to degrees Celsius
+        
         hourly_table['city'] = city
         hourly_table['date'] = date_tab
         city_temp_data = city_temp_data.append(hourly_table)
